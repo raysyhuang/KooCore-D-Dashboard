@@ -10,10 +10,16 @@ This repo is **read-only analytics**:
 ## Features
 
 - 🎯 **Global Date Filter**: Unified date range control that affects ALL dashboard sections
+- 💰 **Comprehensive Performance**: One-click real-time performance tracking across entire dashboard
+  - Individual ticker performance badges on every card
+  - Portfolio-wide analytics: avg return, win rate, best/worst
+  - Performance breakdown by category (Weekly/Pro30/Movers)
+  - Performance breakdown by pick date
+  - All powered by real Yahoo Finance prices
 - 📊 **Overview**: Summary stats, pick volume by source (filtered by global dates)
 - 📅 **Daily Picks**: Timeline view of all scanner outputs (filtered by global dates)
-- 🔍 **Ticker Insights**: Search and analyze individual stocks (filtered by global dates)
-- 📈 **Performance Tracker**: Track REAL stock returns using Yahoo Finance prices
+- 🔍 **Ticker Insights**: Search and analyze individual stocks with real returns
+- 📈 **Performance Tracker**: Specialized forward-looking tracking with real stock prices
 - 🌓 **Dark Mode**: Beautiful light/dark theme support
 - 📡 **Live Data**: Automatic fetching from GitHub Actions artifacts
 
@@ -105,14 +111,31 @@ gunicorn server:app
 
 The dashboard automatically fetches live data from GitHub on page load. Key features:
 
+#### Basic Navigation
 1. **Global Date Filter** (top of page): Set start and end dates to filter ALL dashboard sections
-2. **Performance Tracker**: Click "Track Performance (Real Prices)" to fetch real stock prices and calculate actual returns
+2. **Load Real Prices**: One-click button to fetch actual stock prices for comprehensive performance tracking
 3. **Caching**: API responses are cached for 5 minutes to avoid rate limits
 
+#### Comprehensive Performance Tracking
+1. Click **"Load Real Prices"** button at the top (green banner)
+2. Wait 2-5 seconds while system fetches prices from Yahoo Finance
+3. See results everywhere:
+   - **Ticker cards**: Performance badges show return % and date range
+   - **Portfolio section**: Overall stats, category breakdown, date analysis
+
+#### Performance Tracker (Specialized)
+For forward-looking analysis:
+1. Scroll to "Track Performance" section
+2. Select tracking duration (7/14/30/60/90 days)
+3. Choose sources (Weekly/Pro30/Movers)
+4. Click "Track Performance (Real Prices)"
+
 **Pro Tips**:
+- **Load prices first** for instant insights across the entire dashboard
 - Use global filter to focus on specific weeks or months
-- Track performance with 30-day duration to see realistic returns
-- Compare different time periods to measure model evolution
+- Compare category performance to see which scanner works best
+- Check "Performance by Date" to identify which days had best picks
+- Track evolution: Filter different time periods to measure model improvements
 
 ## File Structure
 
