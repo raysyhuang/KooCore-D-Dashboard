@@ -47,7 +47,7 @@ jobs:
           token = os.environ["GITHUB_TOKEN"]
           owner = "raysyhuang"
           repo = "KooCore-D"
-          artifact_name = "koocore-outputs"
+          artifact_name = "phase5-6-learning"
 
           headers = {
               "Authorization": f"Bearer {token}",
